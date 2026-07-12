@@ -1,29 +1,17 @@
-import { Card, Link } from "@heroui/react";
+import { ProductCard } from "../components/ui/product-card";
+import { productService } from "../services/user.service";
 
 export default async function Home() {
 
+  const products = await productService.getAll();
+
   return (
-    <div>
-      <Card className="w-[400px]">
-        <Card.Header>
-          <Card.Title>Become an Acme Creator!</Card.Title>
-          <Card.Description>
-            Visit the Acme Creator Hub to sign up today and start earning credits from your fans and
-            followers.
-          </Card.Description>
-        </Card.Header>
-        <Card.Footer>
-          <Link
-            aria-label="Go to Acme Creator Hub (opens in new tab)"
-            href="https://heroui.com"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Creator Hub
-            <Link.Icon aria-hidden="true" />
-          </Link>
-        </Card.Footer>
-      </Card>
+    <div className="flex justify-center items-start flex-wrap gap-4">
+      {
+        products.map(e => (
+          <ProductCard key={e.id} {...e} />
+        ))
+      }
     </div>
   );
 }

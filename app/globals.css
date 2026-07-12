@@ -25,3 +25,64 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+.neumorfismo-forward {
+  background: #EEF0F4;
+  border-radius: 24px;
+  box-shadow:
+    9.91px 9.91px 15px #D9DADE,
+    -9.91px -9.91px 15px #FFFFFF;
+}
+
+.neumorfismo-back {
+  background: linear-gradient(145deg, #FFFFFF, #CBCDD0);
+  border-radius: 15%;
+  box-shadow: inset 16.22px 16.22px 15px #D9DADE, inset -16.22px -16.22px 15px #FFFFFF;
+}
+
+.neumorfismo-input {
+  padding: 1rem 1.2rem;
+  margin: 1rem;
+  border-radius: 2rem;
+  display: block;
+  width: 80%;
+  border: none;
+  box-shadow: inset 6px 6px 8px rgba(97, 97, 97, 0.075),
+    6px 6px 6px rgba(255, 255, 255, 0.781);
+  outline: none;
+  background-color: inherit;
+  color: rgb(161, 161, 161);
+  font-size: inherit;
+}
+
+/* From Uiverse.io by CYBWEBALI */
+.neumorfismo-button {
+  display: grid;
+  place-items: center;
+  background: #e3edf7;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.neumorfismo-button:hover {
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+    0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.neumorfismo-button svg {
+  transition: transform 0.5s;
+}
+
+.neumorfismo-button:hover svg {
+  transform: scale(0.9);
+  fill: #333333;
+}
